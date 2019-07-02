@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':lib_http', ':lib_base', ':lib_ui', ':lib_statusbar'

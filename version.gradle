@@ -1,0 +1,162 @@
+/**
+ * Shared file between builds so that they can all use the same dependencies and
+ * maven repositories.
+ **/
+ext.deps = [:]
+def versions = [:]
+/**
+ * 基础
+ */
+versions.android_gradle_plugin = '3.3.2'
+versions.kotlin = "1.3.21"
+versions.support = "1.0.0"
+versions.app_compat = "1.1.0-alpha04"
+versions.core_ktx = "1.2.0-alpha01"
+/**
+ * 网络
+ */
+versions.retrofit = "2.3.0"
+versions.rxjava2 = "2.1.3"
+versions.rx_android = "2.1.0"
+versions.okhttp_logging_interceptor = "3.9.0"
+/**
+ * UI
+ */
+versions.constraintlayout = "1.1.3"
+versions.glide = "4.9.0"
+/**
+ * Base
+ */
+versions.lifecycle = "2.0.0"
+versions.paging = "2.1.0"
+versions.logger = "2.2.0"
+versions.leakcanary = "1.6.3"
+
+def build_versions = [:]
+build_versions.min_sdk = 21
+build_versions.target_sdk = 28
+build_versions.compile_sdk = 28
+build_versions.build_tools = "28.0.3"
+ext.build_versions = build_versions
+
+
+def deps = [:]
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+deps.okhttp_logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp_logging_interceptor"
+deps.constraintlayout="androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+deps.glide = "com.github.bumptech.glide:glide:$versions.glide"
+deps.paging = "androidx.paging:paging-runtime-ktx:$versions.paging"
+deps.logger = "com.orhanobut:logger:$versions.logger"
+ext.deps = deps
+//
+//deps.dayan_common = "com.dayan.finance:common:$versions.dayan_common"
+
+//deps.cymadapter = "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.cymadapter"
+//deps.rx_binding = "com.jakewharton.rxbinding2:rxbinding:$versions.rx_binding"
+
+
+
+
+//deps.anko = "org.jetbrains.anko:anko-commons:$versions.anko"
+//deps.arouter_api = "com.alibaba:arouter-api:$versions.arouter_api"
+//deps.arouter_compiler = "com.alibaba:arouter-compiler:$versions.arouter_compiler"
+//deps.rxpermissions = "com.github.tbruyelle:rxpermissions:$versions.rxpermissions"
+//deps.pictureSelector = "com.github.LuckSiege.PictureSelector:picture_library:$versions.picture_selector"
+
+
+def kotlin = [:]
+kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+kotlin.allopen = "org.jetbrains.kotlin:kotlin-allopen:$versions.kotlin"
+kotlin.coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.0"
+deps.kotlin = kotlin
+
+def support = [:]
+support.annotations = "androidx.annotation:annotation:$versions.support"
+support.app_compat = "androidx.appcompat:appcompat:$versions.app_compat"
+support.recyclerview = "androidx.recyclerview:recyclerview:$versions.support"
+support.cardview = "androidx.cardview:cardview:$versions.support"
+support.design = "com.google.android.material:material:$versions.support"
+support.v4 = "androidx.legacy:legacy-support-v4:$versions.support"
+support.core_utils = "androidx.legacy:legacy-support-core-utils:$versions.support"
+support.core_ktx = "androidx.core:core-ktx:$versions.core_ktx"
+support.webkit = "androidx.webkit:webkit:$versions.support"
+deps.support = support
+
+
+def retrofit = [:]
+retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.mock = "com.squareup.retrofit2:retrofit-mock:$versions.retrofit"
+retrofit.adapter = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+deps.retrofit = retrofit
+
+def rxjava2 = [:]
+rxjava2.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
+rxjava2.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
+deps.rxjava2 = rxjava2
+
+def lifecycle = [:]
+lifecycle.livedata = "androidx.lifecycle:lifecycle-livedata:$versions.lifecycle"
+lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+deps.lifecycle = lifecycle
+
+def leakcanary = [:]
+leakcanary.debug = "com.squareup.leakcanary:leakcanary-android:$versions.leakcanary"
+leakcanary.release  = "com.squareup.leakcanary:leakcanary-android-no-op:$versions.leakcanary"
+leakcanary.debug_fragment = "com.squareup.leakcanary:leakcanary-support-fragment:$versions.leakcanary"
+deps.leakcanary = leakcanary
+
+
+
+//versions.rx_binding = "2.0.0"
+//versions.androidx = "1.0.0"
+//
+//
+//
+//versions.cymadapter = "2.9.45-androidx"
+//
+//
+//
+//versions.anko = "0.10.8"
+//
+//versions.rxpermissions = "0.10.2"
+//versions.arouter_api = "1.4.1"
+//versions.arouter_compiler = "1.2.2"
+//versions.picture_selector = "v2.2.3"
+//
+//
+//
+//versions.test_junit = "4.12"
+//versions.test_runner = "1.1.0"
+//versions.test_espresso = "3.1.0"
+//versions.test_rules = "1.1.0"
+//
+//versions.dayan_common = "0.0.34"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def test = [:]
+test.junit = "junit:junit:$versions.test_junit"
+test.runner = "androidx.test:runner:$versions.test_runner"
+test.espresso = "androidx.test.espresso:espresso-core:$versions.test_espresso"
+test.espresso_intents = "androidx.test.espresso:espresso-intents:$versions.test_espresso"
+test.espresso_contrib = "androidx.test.espresso:espresso-contrib:$versions.test_espresso"
+test.rules = "androidx.test:rules:$versions.test_rules"
+deps.test = test
+
