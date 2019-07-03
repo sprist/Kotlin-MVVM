@@ -6,11 +6,11 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 android {
-    compileSdkVersion build_versions.compile_sdk
+    compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion build_versions.min_sdk
-        targetSdkVersion build_versions.target_sdk
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -28,7 +28,15 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api deps.kotlin.stdlib
-    api deps.support.app_compat
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api deps.lifecycle.livedata
+    api deps.lifecycle.extensions
+    api deps.paging
+    api deps.logger
+    debugImplementation deps.leakcanary.debug
+    releaseImplementation deps.leakcanary.release
+    debugImplementation deps.leakcanary.debug_fragment
+    api project(':lib_http')
+    api project(':lib_statusbar')
+    api project(':lib_ui')
 }

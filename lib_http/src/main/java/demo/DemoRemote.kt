@@ -21,7 +21,7 @@ class DemoRemote : RemoteHelper() {
     private val mServiceApi by lazy { mReto.create(DemoApi::class.java) }
 
 
-    fun queryBox(pageSize: Int, pageNumber: Int, resultCallBack: OnApiResultListener<String>) {
+    fun postResult(pageSize: Int, pageNumber: Int, resultCallBack: OnApiResultListener<String>) {
         val json = JSONObject()
         json.put("pageSize", pageSize)
         json.put("pageNumber", pageNumber)

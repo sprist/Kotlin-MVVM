@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="fontTitle">17sp</dimen>
+    <dimen name="fontSubTitle">16sp</dimen>
+    <dimen name="fontNormal">14sp</dimen>
+    <dimen name="fontTip">12sp</dimen>
+
+    <dimen name="fontBarTitle">20sp</dimen>
+    <dimen name="fontBarFlat">16sp</dimen>
+
+    <dimen name="fontButton">18sp</dimen>
+    <dimen name="fontButtonFlat">14sp</dimen>
+
+    <dimen name="fontEditHint">14sp</dimen>
+    <dimen name="fontEditNormal">17sp</dimen>
+
+
+    <dimen name="paddingPage">24dp</dimen>
+    <dimen name="paddingControl">8dp</dimen>
+    <dimen name="paddingComponent">20dp</dimen>
+
+
+
+    <dimen name="heightToolBar">44dp</dimen>
+    <dimen name="heightLine">0.5dp</dimen>
+    <dimen name="heightTextViewNormal">20dp</dimen>
+    <dimen name="heightTextViewTitle">30dp</dimen>
+    <dimen name="heightEdit">40dp</dimen>
+    <dimen name="heightButtonFlat">36dp</dimen>
+    <dimen name="heightButton">44dp</dimen>
+
+    <dimen name="sizeCheckBox">15dp</dimen>
+
+
+</resources>

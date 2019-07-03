@@ -5,7 +5,6 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
-
 android {
     compileSdkVersion build_versions.compile_sdk
 
@@ -32,4 +31,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api deps.kotlin.stdlib
     api deps.support.app_compat
+    api deps.support.design
+    api deps.constraintlayout
+    api deps.glide
 }

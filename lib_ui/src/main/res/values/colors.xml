@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bgWorkspace">#F6F6F6</color>
+    <color name="bgDialog">#CC000000</color>
+
+    <color name="colorTheme">#3D86E2</color>
+    <color name="colorThemeSelected">#3D86E2</color>
+
+
+    <color name="colorTvNormal">#323232</color>
+    <color name="colorTvGray">#9BA2A7</color>
+    <color name="colorTvDate">#B2B2B2</color>
+    <color name="colorTvTipGray">#DBDCE4</color>
+
+    <color name="colorLine">#ffeeeeee</color>
+
+    <color name="colorRed">#FF4200</color>
+    <color name="colorOrange">#FFDE78</color>
+    <color name="colorGreen">#00c07C</color>
+    <color name="colorBlue">#40C8E7</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#999999</color>
+    <color name="colorBlack">#000000</color>
+</resources>

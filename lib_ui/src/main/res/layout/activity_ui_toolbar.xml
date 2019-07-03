@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/bgWorkspace"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTheme"
+            app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightToolBar">
+
+
+            <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="15dp"
+                    android:layout_height="27dp"
+                    android:visibility="gone"
+                    android:src="@drawable/icon_arrow_left_white"
+                    android:layout_marginStart="@dimen/paddingComponent"
+            />
+
+            <TextView
+                    android:id="@+id/tv_head_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontBarTitle"/>
+
+
+            <TextView
+                    android:id="@+id/tv_right_flat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/paddingComponent"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontBarFlat"/>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <FrameLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+</LinearLayout>
