@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorTheme</item>
+        <item name="colorPrimaryDark">@color/colorThemeSelected</item>
+        <item name="colorAccent">@color/colorTheme</item>
+    </style>
+
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/heightButton</item>
+        <item name="android:textSize">@dimen/fontButton</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/btn_submit_selector</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="ItemLineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/heightLine</item>
+        <item name="android:background">@color/colorGray</item>
+    </style>
+
+    <style name="TextNormalStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/heightTextViewNormal</item>
+        <item name="android:textSize">@dimen/fontNormal</item>
+        <item name="android:textColor">@color/colorTvNormal</item>
+    </style>
 
 
     <!-- Dialog-->
