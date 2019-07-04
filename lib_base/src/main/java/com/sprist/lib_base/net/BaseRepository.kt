@@ -62,7 +62,7 @@ open class BaseRepository {
         val response = Response.loading<T>()
         response.refresh = unit
         response.retry = unit
-        liveData.postValue(response)
+        liveData.value=response
         unit()
     }
 

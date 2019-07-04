@@ -33,9 +33,9 @@ dependencies {
     api deps.lifecycle.extensions
     api deps.paging
     api deps.logger
-    debugImplementation deps.leakcanary.debug
-    releaseImplementation deps.leakcanary.release
-    debugImplementation deps.leakcanary.debug_fragment
+//    debugImplementation deps.leakcanary.debug
+//    releaseImplementation deps.leakcanary.release
+//    debugImplementation deps.leakcanary.debug_fragment
     api project(':lib_http')
     api project(':lib_statusbar')
     api project(':lib_ui')

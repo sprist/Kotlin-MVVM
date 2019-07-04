@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="@dimen/paddingPage"
+              android:layout_height="match_parent">
+
+
+    <Button
+            android:id="@+id/btn_list"
+            style="@style/ButtonStyle"
+            android:text="普通列表"
+    />
+
+    <Button
+            android:id="@+id/btn_paging"
+            android:layout_marginTop="@dimen/paddingComponent"
+            style="@style/ButtonStyle"
+            android:text="Paging列表"
+    />
+
+
+</LinearLayout>

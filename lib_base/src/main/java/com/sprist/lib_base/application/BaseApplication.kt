@@ -5,7 +5,6 @@ import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 import com.sprist.lib_base.utils.ActivityUtils
-import com.squareup.leakcanary.LeakCanary
 import kotlin.properties.Delegates
 
 
@@ -32,12 +31,12 @@ abstract class BaseApplication : Application() {
     }
 
     private fun initLeakCanary() {
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return
-        }
-        LeakCanary.install(this)
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
+//            // This process is dedicated to LeakCanary for heap analysis.
+//            // You should not init your app in this process.
+//            return
+//        }
+//        LeakCanary.install(this)
     }
 
     private fun initLogger() {

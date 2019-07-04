@@ -2,6 +2,7 @@ package com.sprist.lib_base.activity
 
 import android.view.View
 import android.widget.FrameLayout
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.StringRes
 import com.google.android.material.appbar.AppBarLayout
@@ -39,7 +40,7 @@ abstract class BaseToolBarActivity : BaseLoadingActivity() {
 
     class ToolBar(private val activity: BaseToolBarActivity) {
         private var headTitle: TextView = activity.findViewById(R.id.tv_head_title)
-        private var headBack: TextView = activity.findViewById(R.id.iv_back)
+        private var headBack: ImageView = activity.findViewById(R.id.iv_back)
         private var headRightFlat: TextView = activity.findViewById(R.id.tv_right_flat)
 
 

@@ -1,1 +1,1 @@
-include ':app', ':lib_http', ':lib_base', ':lib_ui', ':lib_statusbar'
+include ':app', ':lib_http', ':lib_base', ':lib_ui', ':lib_statusbar', ':module_demo'
