@@ -29,6 +29,8 @@ class MainActivity:BaseToolBarActivity(){
         btn_list.setOnClickListener {
             CommonListActivity.postActivity(this)
         }
-
+        btn_paging.setOnClickListener {
+            PagingListActivity.postActivity(this)
+        }
     }
 }

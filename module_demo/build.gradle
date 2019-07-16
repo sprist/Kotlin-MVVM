@@ -14,6 +14,7 @@ android {
     compileSdkVersion build_versions.compile_sdk
 
     defaultConfig {
+        applicationId "com.spris12t.mvvm"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1

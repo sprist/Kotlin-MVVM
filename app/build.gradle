@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.sprist.mvvm"
+        applicationId "com.spris1t.mvvm"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -25,5 +25,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api deps.kotlin.stdlib
-    api deps.support.app_compat
+     api deps.support.app_compat
+//    api project(':lib_http')
+//    api project(':lib_statusbar')
+    api project(':lib_ui')
 }

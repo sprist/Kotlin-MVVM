@@ -6,8 +6,10 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import com.sprist.lib_base.activity.BaseRefreshListActivity
 import com.sprist.lib_base.adapter.BaseListAdapter
+import com.sprist.lib_base.adapter.BasePagingAdapter
 import com.sprist.module_demo.R
 import com.sprist.module_demo.adapter.CommonListDelegate
+import com.sprist.module_demo.adapter.PagingListDelegate
 import com.sprist.module_demo.vm.DemoViewModel
 import com.sprist.module_demo.vm.DemoViewModelFactory
 
@@ -18,13 +20,13 @@ import com.sprist.module_demo.vm.DemoViewModelFactory
  * Created by liyuhang on 2019/7/3
  *
  */
-class CommonListActivity : BaseRefreshListActivity() {
+class PagingListActivity : BaseRefreshListActivity() {
 
 
     companion object {
 
         fun postActivity(context: Context) {
-            context.startActivity(Intent(context, CommonListActivity::class.java))
+            context.startActivity(Intent(context, PagingListActivity::class.java))
         }
 
     }
@@ -35,7 +37,7 @@ class CommonListActivity : BaseRefreshListActivity() {
 
 
     private val adapter by lazy {
-        BaseListAdapter(ArrayList(), CommonListDelegate(), R.layout.list_item_single_text)
+        BasePagingAdapter(PagingListDelegate(), R.layout.list_item_single_text)
     }
 
 
@@ -50,14 +52,14 @@ class CommonListActivity : BaseRefreshListActivity() {
     override fun getContentView() = R.layout.activity_ui_refresh_list
 
     override fun initData() {
-        ToolBar(this).setTitle("普通列表")
-        viewModel.getCommonItems()
+        ToolBar(this).setTitle("Paging列表")
+        viewModel.getPagingItems()
     }
 
     override fun inject() {
-        viewModel.mCommonListItems.observe(this, loadObserver {
-            adapter.setData(it ?: ArrayList())
-        })
+        viewModel.mPagingListItems.observe(this, loadObserver({
+            adapter.submitList(it)
+        }, isShowLoading = false))
     }
 
     override fun initListener() {

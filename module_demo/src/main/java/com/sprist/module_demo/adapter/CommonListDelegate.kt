@@ -1,5 +1,6 @@
 package com.sprist.module_demo.adapter
 
+import android.support.v4.app.INotificationSideChannel
 import android.view.View
 import com.sprist.lib_base.adapter.BaseDelegate
 import com.sprist.lib_base.adapter.BaseViewHolder
@@ -18,6 +19,7 @@ class CommonListDelegate: BaseDelegate<String>(){
 
     override fun convert(viewType: Int, helper: BaseViewHolder, item: String, position: Int) {
         helper.setText(R.id.tv_content,item)
+
     }
 
     override fun onItemClickListener(view: View, data: String, position: Int) {

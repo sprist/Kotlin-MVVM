@@ -26,14 +26,31 @@ class DemoRemoteImpl : DemoRemote, RemoteHelper() {
     override fun getCommonList(resultCallBack: OnApiResultListener<ArrayList<String>>) {
 //        observe(mServiceApi.getItems(), resultCallBack)
         mockData(resultCallBack)
-
-
     }
+
+    override fun getPagingList(pageSize:Int,pageNumber:Int,resultCallBack: OnApiResultListener<ArrayList<String>>) {
+//        observe(mServiceApi.getItems(), resultCallBack)
+        mockData(resultCallBack)
+    }
+
+
 
     private fun mockData(resultCallBack: OnApiResultListener<ArrayList<String>>) {
         val response = BaseResponse<ArrayList<String>>()
         response.mCode = "200"
         val data = ArrayList<String>()
+        data.add("测试1")
+        data.add("测试2")
+        data.add("测试3")
+        data.add("测试4")
+        data.add("测试5")
+        data.add("测试6")
+        data.add("测试7")
+        data.add("测试8")
+        data.add("测试9")
+        data.add("测试10")
+        data.add("测试11")
+        data.add("测试12")
         data.add("测试1")
         data.add("测试2")
         data.add("测试3")

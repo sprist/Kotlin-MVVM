@@ -11,10 +11,11 @@ import java.util.ArrayList
  *
  */
 
-interface DemoRemote{
+interface DemoRemote {
 
-   fun  getCommonList( resultCallBack: OnApiResultListener<ArrayList<String>>)
+    fun getCommonList(resultCallBack: OnApiResultListener<ArrayList<String>>)
 
+    fun getPagingList(pageSize: Int, pageNumber: Int, resultCallBack: OnApiResultListener<ArrayList<String>>)
 
 
 }
