@@ -6,3 +6,5 @@
 
 
 我想写一个 mvvm+kotlin+livedata+paging+room+rxjava+androidx+retrofit+okhttp+热修复+插件化的东西
+
+现在还没有完成
